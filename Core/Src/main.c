@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "dma.h"
 #include "tim.h"
 #include "gpio.h"
 
@@ -44,7 +45,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-volatile int16_t ADC1_Canal1;
+volatile int16_t ADC1_Canal[2];
+
+uint32_t a=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,11 +90,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC1_Init();
+  MX_DMA_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
 	HAL_TIM_Base_Start(&htim3);
-	HAL_ADC_Start_IT(&hadc1);
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)(&ADC1_Canal), 2);
 	
   /* USER CODE END 2 */
 
@@ -155,7 +159,7 @@ void SystemClock_Config(void)
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-	ADC1_Canal1 = hadc->Instance->DR;
+	a++;
 }
 
 /* USER CODE END 4 */

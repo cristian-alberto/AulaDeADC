@@ -43,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "AulaDeADC::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AulaDeADC-DEBUG-6909214d31253c6fcfe9.json",
+					"jsonFile" : "target-AulaDeADC-DEBUG-264d4675e46e62e61884.json",
 					"name" : "AulaDeADC",
 					"projectIndex" : 0
 				},
@@ -57,7 +57,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BSP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BSP-DEBUG-489ca889a43b3aa7553f.json",
+					"jsonFile" : "target-BSP-DEBUG-d5c1cfd30014ec8f6f9c.json",
 					"name" : "BSP",
 					"projectIndex" : 0
 				}
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/AulaDeADC/build/VisualGDB/Debug",
-		"source" : "E:/AulaDeADC"
+		"build" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug",
+		"source" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC"
 	},
 	"version" : 
 	{

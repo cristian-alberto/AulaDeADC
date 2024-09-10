@@ -128,23 +128,23 @@
 			[
 				{
 					"backtrace" : 9,
-					"path" : "E:/AulaDeADC/Core/Inc"
+					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Core/Inc"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "E:/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "E:/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "E:/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "E:/AulaDeADC/Drivers/CMSIS/Include"
+					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -176,7 +176,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-\"TE:/AulaDeADC/STM32F407VGTX_FLASH.ld\"",
+				"fragment" : "-\"TC:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/STM32F407VGTX_FLASH.ld\"",
 				"role" : "libraries"
 			},
 			{
@@ -214,7 +214,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-\"TE:/AulaDeADC/STM32F407VGTX_FLASH.ld\""
+				"fragment" : "-\"TC:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/STM32F407VGTX_FLASH.ld\""
 			},
 			{
 				"backtrace" : 5,
@@ -269,7 +269,8 @@
 				25,
 				26,
 				27,
-				28
+				28,
+				29
 			]
 		}
 	],
@@ -285,6 +286,12 @@
 			"backtrace" : 9,
 			"isGenerated" : true,
 			"path" : "build/VisualGDB/Debug/CMakeFiles/BSP.dir/Core/Src/adc.c.obj",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 9,
+			"isGenerated" : true,
+			"path" : "build/VisualGDB/Debug/CMakeFiles/BSP.dir/Core/Src/dma.c.obj",
 			"sourceGroupIndex" : 1
 		},
 		{

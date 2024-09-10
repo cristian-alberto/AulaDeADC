@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/AulaDeADC/build/VisualGDB/Debug"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug"
 		},
 		{
 			"name" : "AulaDeADC_BSP_ALIAS",
@@ -71,7 +71,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/AulaDeADC/STM32F407VGTX_FLASH.ld"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/STM32F407VGTX_FLASH.ld"
 		},
 		{
 			"name" : "AulaDeADC_SOURCE_DIR",
@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/AulaDeADC"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC"
 		},
 		{
 			"name" : "BSP_BSP_ALIAS",
@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "E:/AulaDeADC/STM32F407VGTX_FLASH.ld"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/STM32F407VGTX_FLASH.ld"
 		},
 		{
 			"name" : "BSP_ROOT",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "E:/AulaDeADC"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -327,7 +327,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/AulaDeADC/build/VisualGDB/Debug"
+			"value" : "c:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -803,7 +803,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/AulaDeADC/build/VisualGDB/Debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -863,7 +863,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/AulaDeADC"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1371,7 +1371,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "E:/AulaDeADC/build/VisualGDB/Debug/toolchain.cmake"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug/toolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1459,7 +1459,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/AulaDeADC/AulaDeADC.ioc"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/AulaDeADC.ioc"
 		},
 		{
 			"name" : "_BSP_CONFIGURATOR_ID",
@@ -1495,7 +1495,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/AulaDeADC/build/VisualGDB/Debug/BSP.cmake"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/build/VisualGDB/Debug/BSP.cmake"
 		},
 		{
 			"name" : "_BSP_ID",
@@ -1543,7 +1543,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/AulaDeADC"
+			"value" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC"
 		},
 		{
 			"name" : "_BSP_VERSION",
