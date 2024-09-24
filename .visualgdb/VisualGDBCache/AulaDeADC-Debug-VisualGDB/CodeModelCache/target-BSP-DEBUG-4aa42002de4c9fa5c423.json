@@ -200,23 +200,23 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Core/Inc"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Core/Inc"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Include"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -294,23 +294,23 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Core/Inc"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Core/Inc"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Deel/source/repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Include"
+					"path" : "E:/Repos/cristian-alberto/AulaDeADC/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",

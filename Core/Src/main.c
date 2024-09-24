@@ -30,7 +30,31 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+typedef enum
+{
+	false = 0,
+	true
+}typeBool;
 
+typedef struct
+{
+	int16_t Y;
+	int16_t X;
+} type_XY;
+
+typedef union 
+{
+	type_XY stick;
+	int16_t YX[2];
+}type_Stick_Data;
+
+typedef struct 
+{
+	int16_t ADC_Data_XY[2];
+	type_Stick_Data StkData;
+	uint32_t PWM_Data[4];
+	typeBool newData;
+}sStick;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -46,8 +70,9 @@
 
 /* USER CODE BEGIN PV */
 volatile int16_t ADC1_Canal[2];
-
 uint32_t a=0;
+sStick stick;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,10 +117,17 @@ int main(void)
   MX_DMA_Init();
   MX_ADC1_Init();
   MX_TIM3_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+	
+	
 	HAL_TIM_Base_Start(&htim3);
-	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)(&ADC1_Canal), 2);
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)(&(stick.ADC_Data_XY)), 2);
 	
   /* USER CODE END 2 */
 
@@ -106,6 +138,41 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  
+	  if (stick.newData)
+	  {
+		  stick.newData = false;
+		  stick.StkData.YX[0] = stick.ADC_Data_XY[0] - 0x800;
+		  stick.StkData.YX[1] = stick.ADC_Data_XY[1] - 0x800;
+		  
+		  if (stick.StkData.stick.X >= 0)
+		  {
+			  stick.PWM_Data[0] = 0;
+			  stick.PWM_Data[2] = (stick.StkData.stick.X + 1) * 200 / 2048;
+		  }
+		  else
+		  {
+			  stick.PWM_Data[0] = (-stick.StkData.stick.X) * 200 / 2048;
+			  stick.PWM_Data[2] = 0;
+		  }
+		  
+		  
+		  if (stick.StkData.stick.Y >= 0)
+		  {
+			  stick.PWM_Data[3] = 0;
+			  stick.PWM_Data[1] = (stick.StkData.stick.Y + 1) * 200 / 2048;
+		  }
+		  else
+		  {
+			  stick.PWM_Data[3] = (-stick.StkData.stick.Y) * 200 / 2048;
+			  stick.PWM_Data[1] = 0;
+		  }
+		  //HAL_DMA_Start(&hdma_memtonem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4)
+		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, stick.PWM_Data[0]);
+		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, stick.PWM_Data[1]);
+		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, stick.PWM_Data[2]);
+		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, stick.PWM_Data[3]);
+	  }
   }
   /* USER CODE END 3 */
 }
@@ -159,7 +226,7 @@ void SystemClock_Config(void)
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-	a++;
+	stick.newData = true;
 }
 
 /* USER CODE END 4 */
