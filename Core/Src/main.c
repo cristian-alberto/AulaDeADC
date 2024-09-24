@@ -169,11 +169,13 @@ int main(void)
 		  }
 		  
 		  //Precisa configura no cube o MEMO TO MEMO
-		  //HAL_DMA_Start(&hdma_memtomem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4)
-		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, stick.PWM_Data[0]);
-		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, stick.PWM_Data[1]);
-		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, stick.PWM_Data[2]);
-		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, stick.PWM_Data[3]);
+		  //__HAL_UNLOCK(&hdma_memtomem_dma2_stream1);
+		  HAL_DMA_PollForTransfer(&hdma_memtomem_dma2_stream1, HAL_DMA_FULL_TRANSFER, 2); 
+		  HAL_DMA_Start(&hdma_memtomem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4);
+		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, stick.PWM_Data[0]);
+		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, stick.PWM_Data[1]);
+		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, stick.PWM_Data[2]);
+		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, stick.PWM_Data[3]);
 	  }
   }
   /* USER CODE END 3 */
