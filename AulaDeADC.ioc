@@ -76,6 +76,7 @@ MxCube.Version=6.5.0
 MxDb.Version=DB.6.0.50
 NVIC.BusFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:true
 NVIC.DMA2_Stream0_IRQn=true\:0\:0\:false\:false\:true\:false\:true\:true
+NVIC.DMA2_Stream1_IRQn=true\:0\:0\:false\:false\:true\:true\:true\:true
 NVIC.DebugMonitor_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:true
 NVIC.ForceEnableDMAVector=true
 NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:true

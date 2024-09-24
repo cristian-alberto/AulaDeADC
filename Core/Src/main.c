@@ -78,7 +78,7 @@ sStick stick;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void MyDMAComplTranfCallback(DMA_HandleTypeDef * myhdma);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -125,6 +125,7 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
 	
+	HAL_DMA_RegisterCallback(&hdma_memtomem_dma2_stream1, HAL_DMA_XFER_CPLT_CB_ID, MyDMAComplTranfCallback);
 	
 	HAL_TIM_Base_Start(&htim3);
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)(&(stick.ADC_Data_XY)), 2);
@@ -169,9 +170,10 @@ int main(void)
 		  }
 		  
 		  //Precisa configura no cube o MEMO TO MEMO
+		  HAL_DMA_Start_IT(&hdma_memtomem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4);
 		  //__HAL_UNLOCK(&hdma_memtomem_dma2_stream1);
-		  HAL_DMA_PollForTransfer(&hdma_memtomem_dma2_stream1, HAL_DMA_FULL_TRANSFER, 2); 
-		  HAL_DMA_Start(&hdma_memtomem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4);
+		  //HAL_DMA_PollForTransfer(&hdma_memtomem_dma2_stream1, HAL_DMA_FULL_TRANSFER, 2); 
+		  //HAL_DMA_Start(&hdma_memtomem_dma2_stream1, (uint32_t)stick.PWM_Data, (uint32_t)(&(htim4.Instance->CCR1)), 4);
 		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, stick.PWM_Data[0]);
 		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, stick.PWM_Data[1]);
 		  //__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3, stick.PWM_Data[2]);
@@ -231,6 +233,11 @@ void SystemClock_Config(void)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 	stick.newData = true;
+}
+
+void MyDMAComplTranfCallback(DMA_HandleTypeDef * myhdma)
+{
+	a++;
 }
 
 /* USER CODE END 4 */
